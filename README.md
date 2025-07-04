@@ -5,11 +5,11 @@
 
 ---
 
-## Project Overview
+## *Project Overview*
 
-This project showcases how raw healthcare data is handled in a real-world industry scenario entirely within a SQL database environment. The focus is on demonstrating the practical steps that data analysts and engineers typically follow to understand, explore, and clean data to make it ready for deeper analysis, reporting, or modeling.
+*This project showcases how raw healthcare data is handled in a real-world industry scenario entirely within a SQL database environment. The focus is on demonstrating the practical steps that data analysts and engineers typically follow to understand, explore, and clean data to make it ready for deeper analysis, reporting, or modeling.*
 
-The dataset used here represents patient-level information related to lung cancer, including demographic details, medical history, diagnostic timelines, and treatment outcomes. All steps were performed in MySQL Server using standard SQL queries, highlighting how large datasets are commonly managed in production environments where structured storage, consistency, and traceability are critical.
+*The dataset used here represents patient-level information related to lung cancer, including demographic details, medical history, diagnostic timelines, and treatment outcomes. All steps were performed in MySQL Server using standard SQL queries, highlighting how large datasets are commonly managed in production environments where structured storage, consistency, and traceability are critical.*
 
 ---
 
