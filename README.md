@@ -1,7 +1,7 @@
-# AI-Lung-Diagnostics : End-to-End Data Understanding, Exploration, and Cleaning in MySQL
+# *AI-Lung-Diagnostics : End-to-End Data Understanding, Exploration, and Cleaning in MySQL*
 
-**Author:** Niranjan Kumar  
-**Date:** 30 June 2025
+**Author:** *Niranjan Kumar*  
+**Date:** *30 June 2025*
 
 ---
 
