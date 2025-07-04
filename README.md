@@ -15,9 +15,9 @@
 
 ## 1. Data Understanding
 
-The first phase aimed to build a complete understanding of the dataset’s structure, size, and initial quality before moving into detailed exploration or transformations.
+*The first phase aimed to build a complete understanding of the dataset’s structure, size, and initial quality before moving into detailed exploration or transformations.*
 
-Key tasks performed:
+*Key tasks performed:*
 
 - **Verified record count:** Checked the total number of rows to understand the dataset’s scale and assess potential data processing requirements.
 - **Verified column count:** Checked the total number of columns to confirm that all relevant features are available.
