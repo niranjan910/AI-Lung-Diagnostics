@@ -1,5 +1,5 @@
 # *AI-Lung-Diagnostics : End-to-End Data Understanding, Exploration, and Cleaning in MySQL*
-- *This Power BI project explores survival patterns, treatment effectiveness, patient demographics, and treatment timelines among lung cancer patients.*
+*This Power BI project explores survival patterns, treatment effectiveness, patient demographics, and treatment timelines among lung cancer patients.*
 
 ***Author:*** *Niranjan Kumar*  
 ***Date:*** *30 June 2025*
