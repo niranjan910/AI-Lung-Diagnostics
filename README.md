@@ -20,7 +20,7 @@
 What % of patients survived?
 
 ### 🖼️ **Dashboard Image**
-![Survival Trends Dashboard](./dashboards/Survival_Trends.png)
+![Survival Trends Dashboard](Dashboard/Dashboard 1.png)
 
 ### 📊 **Observations**
 - **Total Patients:** 890K
