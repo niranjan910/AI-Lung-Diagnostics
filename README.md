@@ -1,7 +1,8 @@
 # *AI-Lung-Diagnostics : End-to-End Data Understanding, Exploration, and Cleaning in MySQL*
+- *This Power BI project explores survival patterns, treatment effectiveness, patient demographics, and treatment timelines among lung cancer patients.*
 
-**Author:** *Niranjan Kumar*  
-**Date:** *30 June 2025*
+***Author:*** *Niranjan Kumar*  
+***Date:*** *30 June 2025*
 
 ---
 
@@ -13,76 +14,127 @@
 
 ---
 
-## 1. Data Understanding
+## 📁 1️⃣ Survival Trends
 
-*The first phase aimed to build a complete understanding of the dataset’s structure, size, and initial quality before moving into detailed exploration or transformations.*
+### 🎯 **Business Problem**
+What % of patients survived?
 
-*Key tasks performed:*
+### 🖼️ **Dashboard Image**
+![Survival Trends Dashboard](./dashboards/Survival_Trends.png)
 
-- **Verified record count:** Checked the total number of rows to understand the dataset’s scale and assess potential data processing requirements.
-- **Verified column count:** Checked the total number of columns to confirm that all relevant features are available.
-- **Reviewed schema:** Retrieved and reviewed the list of all column names to understand what fields are included.
-- **Inspected data samples:** Viewed the first few rows to validate that the data looks consistent and free from obvious structural issues.
-- **Checked data types:** Verified the data type of each column to confirm that numerical, categorical, and date fields are stored appropriately.
-- **Identified missing values:** Investigated key columns for NULL or missing values that could affect downstream analysis.
-- **Checked for duplicate records:** Searched for duplicate rows to ensure that the dataset does not contain redundant entries which could bias results.
-
-This foundational step ensures confidence in the data structure and highlights any immediate issues that need addressing before deeper work begins.
-
----
-
-## 2. Data Exploration
-
-With a clear understanding of the dataset’s shape and content, the next step focused on exploring the actual data distributions to detect anomalies, validate assumptions, and confirm that the data aligns with real-world expectations.
-
-### Continuous Variables
-
-- Identified important continuous columns, specifically `age`, `bmi`, and `cholesterol_level`, which are critical for patient health analysis.
-- Examined minimum and maximum values to ensure these variables fall within realistic and medically plausible ranges.
-- Performed basic outlier checks by comparing value ranges to expected human health parameters to catch invalid or extreme entries.
-
-### Categorical Variables
-
-- Identified major categorical columns including `gender`, `country`, `cancer_stage`, `family_history`, `smoking_status`, and `treatment_type`.
-- Reviewed unique categories for each field to verify consistency and detect any spelling errors, unexpected categories, or formatting inconsistencies.
-- Analyzed frequency distributions to check for imbalanced categories or unusual patterns that may need attention.
-
-This exploration step bridges the gap between raw data and meaningful insights by highlighting potential areas that require cleaning or transformation.
+### 📊 **Observations**
+- **Total Patients:** 890K
+- **Total Survived:** 196K (22%)
+- **Total Not Survived:** 694K (78%)
+- **Survival Rate:** 0.22  
+- **Non-Survival Rate:** 0.78  
+- The donut chart shows a significant imbalance: only about **1 in 5** patients survived.
+- The distribution is visually skewed toward non-survivors (red), indicating poor survival outcomes across the dataset.
 
 ---
 
-## 3. Data Cleaning
+## 📁 2️⃣ Comorbidities & Survival
 
-Following data understanding and exploration, practical cleaning operations were carried out to improve the dataset’s usability and ensure consistency for future analysis.
+### 🎯 **Business Problem**
+How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Cholesterol levels affect survival?
 
-Key cleaning tasks included:
+### 🖼️ **Dashboard Image**
+![Comorbidities Dashboard](./dashboards/Comorbidities_Survival.png)
 
-- **Standardized binary columns:** Several binary variables (`hypertension`, `asthma`, `other_cancer`, `survived`) were originally stored as numeric flags (`0` and `1`). These were transformed into more interpretable string labels (`'No'` and `'Yes'`) to make the dataset more readable and consistent for non-technical stakeholders.
-- **Adjusted column data types:** The binary columns were converted from numeric to text (`VARCHAR`) to properly store the new labels without errors.
-- **Used batch updates for large data volumes:** Updates were run in safe, controlled batches using `LIMIT` and safe update mode adjustments to handle high row counts without causing server timeouts or accidental full-table modifications.
-- **Validated cleaning results:** After each transformation, distinct values were checked to ensure that no residual numeric flags remained and that only the intended text values were present.
+### 📊 **Observations**
+- **Hypertension:**
+  - Patients with Hypertension have a higher death count (~0.52M).
+  - Survival is much lower among hypertensive patients (~0.15M) compared to non-hypertensive (~0.17M).
+- **Asthma:**
+  - Both asthmatic and non-asthmatic groups have high death rates, but asthmatics show slightly better survival (~0.09M).
+- **Cirrhosis:**
+  - Cirrhosis patients mostly did not survive (~0.16M deaths vs 0.04M survived).
+- **Other Cancer:**
+  - Patients with other cancers show a poor survival rate: ~0.02M survived vs ~0.06M deaths.
+  - Those without other cancers: ~0.18M survived vs ~0.63M deaths.
+- **Cholesterol Levels:**
+  - High cholesterol group has the most deaths (~0.51M).
+  - Borderline and high cholesterol patients have fewer survivors compared to deaths.
 
-Through this methodical cleaning phase, the dataset was prepared to meet real-world standards for clarity, accuracy, and reliability.
-
----
-
-## Project Outcome
-
-By following these steps, the lung cancer dataset was systematically understood, explored, and cleaned within MySQL Server using industry-standard SQL practices. This process reflects how raw data is typically prepared inside production databases before being handed off to business intelligence teams, data scientists, or analysts for further modeling, visualization, and insight generation.
-
-The cleaned and standardized dataset is now suitable for more advanced tasks such as statistical testing, exploratory data analysis in Python, dashboard creation, or the development of predictive models to support healthcare research and decision-making.
-
----
-
-## Tools and Technologies Used
-
-- **MySQL Server** for database management and SQL execution
-- **MySQL Workbench** for writing and running queries and managing the database
+📌 **Key Insight**: All comorbidities are **negatively associated** with survival — especially **Hypertension** and **Cirrhosis**.
 
 ---
 
-## Next Steps
+## 📁 3️⃣ Treatment Effectiveness
 
-Future work will include exporting the cleaned dataset for further analysis in Python, creating visual dashboards, performing deeper statistical tests, or developing machine learning pipelines to generate actionable insights for healthcare applications.
+### 🎯 **Business Problem**
+Which treatment type gives better survival outcomes?
+
+### 🖼️ **Dashboard Image**
+![Treatment Effectiveness Dashboard](./dashboards/Treatment_Effectiveness.png)
+
+### 📊 **Observations**
+- **Treatment Types**: Chemotherapy, Radiation, Surgery, Combined
+- Each treatment type had **roughly 223K patients**.
+- Survival per treatment:
+  - **Chemotherapy**: ~49K survived, ~174K did not
+  - **Radiation**: ~49K survived, ~172K did not
+  - **Surgery**: ~49K survived, ~174K did not
+  - **Combined**: ~49K survived, ~174K did not
+- **Survival rates appear nearly identical** across all treatment types (~22%).
+- The donut chart shows equal distribution of patients across all treatments.
+
+📌 **Key Insight**: No treatment type clearly outperforms the others — **survival rates remain consistently low** regardless of treatment type.
 
 ---
+
+## 📁 4️⃣ Demographics
+
+### 🎯 **Business Problem**
+What is the patient distribution by Gender, Country, and BMI Group?
+
+### 🖼️ **Dashboard Image**
+![Demographics Dashboard](./dashboards/Demographics.png)
+
+### 📊 **Observations**
+- **Gender**:
+  - Evenly split: Male ~445K (50.02%), Female ~445K (49.98%)
+- **BMI Category**:
+  - Most common: **Normal**, followed by Obese Class 3, Obese Class 1, Obese Class 2, Overweight
+  - **Underweight** category had the fewest patients
+- **Country**:
+  - Top contributing countries: Denmark, Netherlands, Spain, Greece, Croatia, Sweden, France, Portugal, Ireland, Malta
+  - Each country had around 30K+ patients
+
+📌 **Key Insight**: The dataset shows a **balanced gender distribution**, with higher BMI classes being prevalent and **European countries** being the major contributors to the dataset.
+
+---
+
+## 📁 5️⃣ Timeline
+
+### 🎯 **Business Problem**
+How long do treatments last? Are there trends by Cancer Stage or Treatment Type?
+
+### 🖼️ **Dashboard Image**
+![Timeline Dashboard](./dashboards/Timeline.png)
+
+### 📊 **Observations**
+- **Average Treatment Duration**: 458 days
+- **Min Duration**: 183 days
+- **Max Duration**: 730 days
+- **Duration by Cancer Stage**:
+  - Stage I: ~530 days
+  - Stage II: ~490 days
+  - Stage III: ~450 days
+  - Stage IV: ~410 days
+  - 📉 Duration **decreases with higher stages** (Stage IV patients have shortest durations)
+- **Box Plot by Treatment Type**:
+  - All treatments had similar median durations (around 50K–60K patients each)
+- **Monthly Trends**:
+  - Average treatment durations remained stable across months (between 456–461 days)
+  - No drastic fluctuations or seasonality observed
+
+📌 **Key Insight**: **Earlier stage patients undergo longer treatment durations**, and treatment timelines remain **consistent across months**, regardless of treatment type.
+
+---
+
+## ✅ Summary
+
+This project offers a full end-to-end analysis of lung cancer survival patterns using interactive dashboards in Power BI. It answers critical business questions around survival trends, comorbidities, treatment impact, demographics, and timelines — making it ideal for healthcare analytics portfolios.
+
+
