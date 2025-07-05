@@ -113,7 +113,7 @@ What is the patient distribution by Gender, Country, and BMI Group?
 How long do treatments last? Are there trends by Cancer Stage or Treatment Type?
 
 ### 🖼️ **Dashboard Image**
-![Timeline Dashboard](./dashboards/Timeline.png)
+![Timeline](Dashboard/Dashboard_5.png)
 
 ### 📊 **Observations**
 - **Average Treatment Duration**: 458 days
