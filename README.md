@@ -3,6 +3,8 @@
 
 ***Author:*** *Niranjan Kumar*  
 ***Date:*** *30 June 2025*
+***Data Understanding, Data Exploration, Data Cleaning - SQL***
+***Dashboard- Power BI***
 
 ---
 
