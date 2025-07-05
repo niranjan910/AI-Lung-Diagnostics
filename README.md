@@ -39,7 +39,7 @@ What % of patients survived?
 How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Cholesterol levels affect survival?
 
 ### 🖼️ **Dashboard Image**
-![Comorbidities Dashboard](./dashboards/Comorbidities_Survival.png)
+![Comorbidities & Survival](Dashboard/Dashboard_2.png)
 
 ### 📊 **Observations**
 - **Hypertension:**
