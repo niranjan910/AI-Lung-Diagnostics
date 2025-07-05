@@ -65,8 +65,9 @@ How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Choles
 ### 🎯 **Business Problem**
 Which treatment type gives better survival outcomes?
 
-### 🖼️ **Dashboard Image**
-![Treatment Effectiveness Dashboard](./dashboards/Treatment_Effectiveness.png)
+### 🖼️ **Dashboard Image** 
+
+![Comorbidities & Survival](Dashboard/Dashboard_3.png)
 
 ### 📊 **Observations**
 - **Treatment Types**: Chemotherapy, Radiation, Surgery, Combined
