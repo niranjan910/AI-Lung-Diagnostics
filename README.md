@@ -17,7 +17,7 @@
 ## 📁 1️⃣ Survival Trends
 
 ### 🎯 **Business Problem**
-What % of patients survived?
+*What % of patients survived?*
 
 ### 🖼️ **Dashboard Image**
 ![Survival Trends](Dashboard/Dashboard%201.png)
@@ -36,7 +36,7 @@ What % of patients survived?
 ## 📁 2️⃣ Comorbidities & Survival
 
 ### 🎯 **Business Problem**
-How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Cholesterol levels affect survival?
+*How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Cholesterol levels affect survival?*
 
 ### 🖼️ **Dashboard Image**
 ![Comorbidities & Survival](Dashboard/Dashboard_2.png)
@@ -63,7 +63,7 @@ How do conditions like Hypertension, Asthma, Cirrhosis, Other Cancer, and Choles
 ## 📁 3️⃣ Treatment Effectiveness
 
 ### 🎯 **Business Problem**
-Which treatment type gives better survival outcomes?
+*Which treatment type gives better survival outcomes?*
 
 ### 🖼️ **Dashboard Image** 
 
@@ -87,7 +87,7 @@ Which treatment type gives better survival outcomes?
 ## 📁 4️⃣ Demographics
 
 ### 🎯 **Business Problem**
-What is the patient distribution by Gender, Country, and BMI Group?
+*What is the patient distribution by Gender, Country, and BMI Group?*
 
 ### 🖼️ **Dashboard Image**
 
@@ -110,7 +110,7 @@ What is the patient distribution by Gender, Country, and BMI Group?
 ## 📁 5️⃣ Timeline
 
 ### 🎯 **Business Problem**
-How long do treatments last? Are there trends by Cancer Stage or Treatment Type?
+*How long do treatments last? Are there trends by Cancer Stage or Treatment Type?*
 
 ### 🖼️ **Dashboard Image**
 ![Timeline](Dashboard/Dashboard_5.png)
