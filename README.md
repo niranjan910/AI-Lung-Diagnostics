@@ -90,7 +90,8 @@ Which treatment type gives better survival outcomes?
 What is the patient distribution by Gender, Country, and BMI Group?
 
 ### 🖼️ **Dashboard Image**
-![Demographics Dashboard](./dashboards/Demographics.png)
+
+![Demographics](Dashboard/Dashboard_4.png)
 
 ### 📊 **Observations**
 - **Gender**:
